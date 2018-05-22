@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Start</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="" />
+	<link rel="icon" href="favicon.png"/>
+	<link rel="stylesheet" href="css/normalize.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+	<div class="ba-container">
+		<div class="card-container">
+			<div class="card-container__front">
+				<img src="img/11111.jpg">
+			</div>
+			<div class="card-container__back">
+				<div class="first-card"><img src="img/153307.jpg"></div>
+				<div class="second-card"><img src="img/153310.jpg"></div>
+				<div class="third-card"><img src="img/153308.jpg"></div>
+				<div class="four-card"><img src="img/153311.jpg"></div>
+				<div class="five-card"><img src="img/153309.jpg"></div>
+				<div class="six-card"><img src="img/153312.jpg"></div>
+			</div>
+		</div>
+		<div class="button-container">
+			<h2>Guess a card in your mind and click the button</h2>
+			<button id="clickButton">Click me!</button>
+			<button id="refreshButton">Try again</button>
+		</div>
+	</div>
+
+
+	<script>
+		jQuery(document).ready(function($){
+			$('#clickButton').on('click', function(){
+				var diesVal = Math.floor((Math.random() * 6) + 1);
+				$(this).css('display', 'none');
+				if(diesVal === 1) {
+					$('.first-card').css('display', 'block');
+					$('.card-container').css('transform', 'rotateY(180deg)').addClass('forTurnCard');
+					$('#refreshButton').css('display', 'block');
+				};
+				if(diesVal === 2) {
+					$('.second-card').css('display', 'block');
+					$('.card-container').css('transform', 'rotateY(180deg)').addClass('forTurnCard');
+					$('#refreshButton').css('display', 'block');
+				};
+				if(diesVal === 3) {
+					$('.third-card').css('display', 'block');
+					$('.card-container').css('transform', 'rotateY(180deg)').addClass('forTurnCard');
+					$('#refreshButton').css('display', 'block');
+				};
+				if(diesVal === 4) {
+					$('.four-card').css('display', 'block');
+					$('.card-container').css('transform', 'rotateY(180deg)').addClass('forTurnCard');
+					$('#refreshButton').css('display', 'block');
+				};
+				if(diesVal === 5) {
+					$('.five-card').css('display', 'block');
+					$('.card-container').css('transform', 'rotateY(180deg)').addClass('forTurnCard');
+					$('#refreshButton').css('display', 'block');
+				};
+				if(diesVal === 6) {
+					$('.six-card').css('display', 'block');
+					$('.card-container').css('transform', 'rotateY(180deg)').addClass('forTurnCard');
+					$('#refreshButton').css('display', 'block');
+				};
+			});
+			$('#refreshButton').on('click', function(){
+				location.reload(true);
+			})
+		});
+	</script>
+</body>
+</html>

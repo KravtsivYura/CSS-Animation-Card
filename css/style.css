@@ -1,0 +1,146 @@
+body{
+
+}
+
+/* Layout */
+
+.ba-container {
+	padding: 50px 20px 20px 270px;
+	max-width: 1200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.card-container {
+	transform-style: preserve-3d;
+	transition: all 2s ease;
+	position: relative;
+	transform-origin: 0 0;
+	position: relative;
+}
+.forTurnCard {
+	animation-name: cardMoveTurn;
+	animation-duration: 3s;
+	animation-delay: 4s;
+	animation-fill-mode: forwards;
+}
+@keyframes cardMoveTurn {
+	0% {
+		transform: rotateY(180deg);
+	}
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+.button-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding-left: 50px;
+	text-align: center;
+}
+.button-container h2 {
+	margin-bottom: 30px;
+}
+#refreshButton {
+	display: none;
+}
+.card-container__front {
+	z-index: 10;
+	backface-visibility: hidden;
+	border: 2px solid grey;
+	border-radius: 7px;
+	box-shadow: 2px 5px 5px black;
+}
+
+.card-container__back {
+	z-index: -1;
+	transform: rotateY(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	backface-visibility: hidden;
+}
+.first-card, .second-card, .third-card, .four-card, .five-card, .six-card {
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	border: 2px solid grey;
+	border-radius: 7px;
+	box-shadow: 2px 5px 5px black;
+	animation-name: card;
+	animation-duration: 3s;
+	animation-delay: 1s;
+	animation-fill-mode: forwards;
+}
+@keyframes card {
+	0% {
+		transform: rotateY(0deg);
+	}
+	100% {
+		transform: rotateY(180deg);
+	}
+}
+
+img {
+	display: block;
+}
+button {
+	padding: 10px 15px;
+	background-color: green;
+	border-radius: 5px;
+	border: none;
+	outline: none;
+	color: #fff;
+}
+button:hover {
+	padding: 12px 17px;
+	margin: -2px -2px;
+}
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button{
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button{
+	display: inline-block;
+}
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover{
+
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select {
+	transition: color .3s ease-in, border-color .3s ease-in, background-color .3s ease-in, opacity .3s ease-in;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+
+}
+textarea {
+
+}
